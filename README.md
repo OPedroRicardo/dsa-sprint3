@@ -2,6 +2,12 @@
 
 Sistema de gerenciamento de fila de teleconsultas da plataforma Blua (Care Plus), implementado em C com estruturas de dados construídas do zero sobre listas encadeadas.
 
+## Vídeo
+https://youtu.be/0jWBHbSoWlE
+
+## Relatório do projeto
+O relatório do projeto está em [relatorio.pdf](./relatorio.pdf) na raíz do repositório
+
 ## Estruturas implementadas
 
 | Estrutura | Política | Uso no sistema |
@@ -20,6 +26,9 @@ Nenhuma biblioteca externa de fila/pilha foi utilizada. Todas as estruturas são
 
 ## Como compilar e executar
 
+### Executável (não recomendado)
+Para facilitar a vida do professor criei um executável chamado blua_diagnostics.exe, mas o mais recomendado é compilar e executar o código
+
 ### Pré-requisitos
 
 - GCC (ou qualquer compilador C11)
@@ -28,7 +37,7 @@ Nenhuma biblioteca externa de fila/pilha foi utilizada. Todas as estruturas são
 ### Compilar com CMake
 
 ```bash
-cd sprint3
+cd dsa-sprint3
 cmake -S . -B build
 cmake --build build
 ./build/blua_diagnostics
@@ -37,7 +46,7 @@ cmake --build build
 ### Compilar diretamente com GCC
 
 ```bash
-cd sprint3
+cd dsa-sprint3
 gcc -std=c11 -o blua_diagnostics main.c structures/linked_list.c structures/queue.c structures/stack.c
 ./blua_diagnostics
 ```
@@ -105,9 +114,11 @@ p                                 # Fila: [5] Gabriela → [6] Hugo
 ## Estrutura do projeto
 
 ```
-sprint3/
+dsa-sprint3/
 ├── main.c                    # Ponto de entrada, menu interativo e lógica de undo
 ├── CMakeLists.txt
+├── blua_diagnostics.exe      # Executável
+├── README.,d                 # Este arquivo :)
 └── structures/
     ├── linked_list.h / .c    # Nó e operações primitivas de lista encadeada
     ├── queue.h / .c          # Fila FIFO com priorização e cancelamento
